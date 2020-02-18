@@ -102,8 +102,6 @@ public class UserServiceImpl implements UserService {
 			}
 		});
 		Integer count = timeSlots.size();
-		System.out.println(count);
-		System.out.println(expectedCount[0]);
 		if (expectedCount[0] != count) {
 			log.error("UserServiceImpl bookSlots ---> SlotNotAvailableException occured");
 			throw new SlotNotAvailableException(AppConstant.SLOT_NOT_AVAILABLE);
